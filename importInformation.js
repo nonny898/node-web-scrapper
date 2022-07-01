@@ -1,6 +1,6 @@
 import fs from 'fs';
 import puppeteer from 'puppeteer';
-import { mousePath } from './urls/mouseUrls.js';
+import { powersupplyPath } from './urls/powersupplyUrls.js';
 
 const evaluateElementToText = async (page, element) => {
   try {
@@ -116,7 +116,7 @@ const scrape = async (url) => {
 const main = async () => {
   let result = [];
   let failedPath = [];
-  for (const url of mousePath) {
+  for (const url of powersupplyPath) {
     console.log('🚀 ~ main ~ url', url);
     const productInfo = await scrape(url);
     if (productInfo) {
@@ -125,8 +125,11 @@ const main = async () => {
       failedPath.push(url);
     }
   }
-  fs.writeFileSync('mouseInfo.json', JSON.stringify(result));
-  fs.writeFileSync('error/failedmouseUrls.json', JSON.stringify(failedPath));
+  fs.writeFileSync('powersupplyInfo.json', JSON.stringify(result));
+  fs.writeFileSync(
+    'error/failedpowersupplyUrls.json',
+    JSON.stringify(failedPath),
+  );
 };
 
 main();
