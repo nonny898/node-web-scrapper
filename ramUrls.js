@@ -1,4 +1,4 @@
-const ramPath = [
+export const ramPath = [
   'https://www.jib.co.th/web/product/readProduct/25388/16GB--8GBx2--DDR4-3200MHz-RAM-G-SKILL-TRIDENT-Z-RGB--F4-3200C16D-16GTZR-',
   'https://www.jib.co.th/web/product/readProduct/27687/16GB--8GBx2--DDR4-2666MHz-RAM-CORSAIR-VENGEANCE-LPX--BLACK---CMK16GX4M2A2666C16-',
   'https://www.jib.co.th/web/product/readProduct/35163/16GB--8GBx2--DDR4-3200MHz-RAM-G-SKILL-TRIDENT-Z-NEO--F4-3200C16D-16GTZN-',

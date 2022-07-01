@@ -1,4 +1,4 @@
-const pccasePath = [
+export const pccasePath = [
   'https://www.jib.co.th/web/product/readProduct/26065/COUGAR-MX330-X',
   'https://www.jib.co.th/web/product/readProduct/17409/COUGAR-QBX',
   'https://www.jib.co.th/web/product/readProduct/26342/COUGAR-MX330',

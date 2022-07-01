@@ -1,4 +1,4 @@
-const ssdPath = [
+export const ssdPath = [
   'https://www.jib.co.th/web/product/readProduct/27060/500-GB-SSD-WD-BLUE-2-5--SATA3-SSD--WDS500G2B0A-',
   'https://www.jib.co.th/web/product/readProduct/28657/1-TB-SSD-WD-BLUE--WDS100T2B0A-',
   'https://www.jib.co.th/web/product/readProduct/27423/250-GB-SSD-WD-BLUE--WDS250G2B0A--3D-NAND-SATA',

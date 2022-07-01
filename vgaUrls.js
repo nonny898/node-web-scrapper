@@ -1,4 +1,4 @@
-const vgaPath = [
+export const vgaPath = [
   'https://www.jib.co.th/web/product/readProduct/49838/MANLI-GEFORCE-RTX-3070-TI-GALLARDO---8GB-GDDR6X--M3515-N651-02---LHR-',
   'https://www.jib.co.th/web/product/readProduct/49840/MANLI-GEFORCE-RTX-3080-TI-GALLARDO---12GB-GDDR6X--M3486-N612-00---LHR-',
   'https://www.jib.co.th/web/product/readProduct/43872/ASUS-TUF-RTX3070-O8G-GAMIMG---8GB-GDDR6',

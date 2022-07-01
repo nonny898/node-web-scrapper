@@ -1,4 +1,4 @@
-const powersupplyPath = [
+export const powersupplyPath = [
   'https://www.jib.co.th/web/product/readProduct/20959/THERMALTAKE-TR2-S-650W-80-PLUS--TRS-0650P-2-',
   'https://www.jib.co.th/web/product/readProduct/18455/COUGAR-STX550---550W-80-PLUS-WHITE',
   'https://www.jib.co.th/web/product/readProduct/26886/THERMALTAKE-SMART-RGB-700W-80-PLUS--PS-SPR-0700NHSAWx-1-',

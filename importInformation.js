@@ -1,6 +1,6 @@
 import fs from 'fs';
 import puppeteer from 'puppeteer';
-import { cpuliquidPath } from './urls/cpuliquidUrls.js';
+import { mousePath } from './urls/mouseUrls.js';
 
 const evaluateElementToText = async (page, element) => {
   try {
@@ -116,10 +116,7 @@ const scrape = async (url) => {
 const main = async () => {
   let result = [];
   let failedPath = [];
-  // const path = [
-  //   'https://www.jib.co.th/web/product/readProduct/33132/ASROCK-B450M-STEEL-LEGEND',
-  // ];
-  for (const url of cpuliquidPath) {
+  for (const url of mousePath) {
     console.log('🚀 ~ main ~ url', url);
     const productInfo = await scrape(url);
     if (productInfo) {
@@ -128,11 +125,8 @@ const main = async () => {
       failedPath.push(url);
     }
   }
-  fs.writeFileSync('cpuLiquidInfo.json', JSON.stringify(result));
-  fs.writeFileSync(
-    'error/failedCpuLiquidUrls.json',
-    JSON.stringify(failedPath),
-  );
+  fs.writeFileSync('mouseInfo.json', JSON.stringify(result));
+  fs.writeFileSync('error/failedmouseUrls.json', JSON.stringify(failedPath));
 };
 
 main();
