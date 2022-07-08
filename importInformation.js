@@ -1,6 +1,7 @@
 import fs from 'fs';
 import puppeteer from 'puppeteer';
-import { powersupplyPath } from './urls/powersupplyUrls.js';
+import cliProgress from 'cli-progress';
+import { vgaPath } from './urls/vgaUrls.js';
 
 const evaluateElementToText = async (page, element) => {
   try {
@@ -116,8 +117,22 @@ const scrape = async (url) => {
 const main = async () => {
   let result = [];
   let failedPath = [];
-  for (const url of powersupplyPath) {
-    console.log('🚀 ~ main ~ url', url);
+
+  const b1 = new cliProgress.SingleBar({
+    format: 'progress [{bar}] {percentage}% || {value}/{total} || URL: {url}',
+    barCompleteChar: '\u2588',
+    barIncompleteChar: '\u2591',
+    hideCursor: true,
+  });
+
+  b1.start(vgaPath.length, 0, {
+    url: 'N/A',
+  });
+
+  for (const url of vgaPath) {
+    b1.increment({
+      url,
+    });
     const productInfo = await scrape(url);
     if (productInfo) {
       result.push(productInfo);
@@ -125,11 +140,9 @@ const main = async () => {
       failedPath.push(url);
     }
   }
-  fs.writeFileSync('powersupplyInfo.json', JSON.stringify(result));
-  fs.writeFileSync(
-    'error/failedpowersupplyUrls.json',
-    JSON.stringify(failedPath),
-  );
+  fs.writeFileSync('vgaInfo.json', JSON.stringify(result));
+  fs.writeFileSync('error/failedvgaUrls.json', JSON.stringify(failedPath));
+  b1.stop();
 };
 
 main();

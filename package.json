@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^14.4.1"
+    "cli-progress": "^3.11.2",
+    "puppeteer": "^14.4.1",
+    "snakecase": "^1.0.0"
   }
 }
